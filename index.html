@@ -12,15 +12,18 @@
     />
   </head>
   <body>
-    <header><span class="logo">This interior</span></header>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Collection</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </nav>
+    <header>
+      <span class="logo">This interior</span>
+      <nav class="menu">
+        <ul>
+          <li class="menu__item">Home</li>
+          <li class="menu__item">Collection</li>
+          <li class="menu__item">About</li>
+          <li class="menu__item">Contact</li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <section class="text">
         <h1 class="title">Modern interior</h1>
@@ -28,24 +31,44 @@
           A full-Service residential & commercial interior design and staging
           company offering professional organizing & eco-services.
         </p>
-        <a href="#" class="read-more">Read more</a>
+        <a href="#" class="read-more">
+          Read more
+          <svg
+            class="read-more__arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            width="18px"
+            height="18px"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z" />
+          </svg>
+        </a>
       </section>
       <section class="pics">
         <img src="./imgs/photo1.png" alt="Modern living room" class="image" />
         <div class="card">
-          <div class="card-user">
+          <div class="user">
             <img
               src="./imgs/photo2.png"
               alt="Profile picture"
-              class="card-user__picture"
+              class="user__picture"
             />
-            <h2 class="card-user__name">Aliza Webber</h2>
-            <h3 class="card-user__job">Interior designer</h3>
+            <div class="user__info">
+              <h2 class="user__name">Aliza Webber</h2>
+              <h3 class="user__job">Interior designer</h3>
+            </div>
           </div>
           <p class="card-text">Designed in 2020 by Aliza Webber</p>
         </div>
       </section>
     </main>
-    <footer><p class="credits">Your name @ DevChallenges.io</p></footer>
+    <footer>
+      <p class="credits">
+        <a href="https://github.com/victorcr87">Víctor C.R.</a> @
+        <a href="https://www.devchallenges.io">DevChallenges.io</a>
+      </p>
+    </footer>
   </body>
 </html>
