@@ -26,6 +26,9 @@ header {
 }
 
 header .logo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   text-transform: uppercase;
   font-family: "Crimson Pro", serif;
   font-size: 14px;
@@ -39,6 +42,21 @@ header .menu__item {
   font-size: 18px;
   font-weight: 700;
   margin-left: 5vw;
+}
+
+@media (max-width: 850px) {
+  header .menu {
+    display: none;
+  }
+  header .menu.fade {
+    display: block;
+  }
+}
+
+@media (max-width: 850px) {
+  header {
+    margin-top: 10%;
+  }
 }
 
 main {
@@ -62,9 +80,21 @@ main .text .title {
   font-size: 48px;
 }
 
+@media (max-width: 850px) {
+  main .text .title {
+    font-size: 36px;
+  }
+}
+
 main .text .description {
   font-weight: 300;
   font-size: 24px;
+}
+
+@media (max-width: 850px) {
+  main .text .description {
+    font-size: 14px;
+  }
 }
 
 main .text .read-more {
@@ -76,6 +106,12 @@ main .text .read-more {
 main .text .read-more__arrow {
   vertical-align: middle;
   margin-left: 5px;
+}
+
+@media (max-width: 850px) {
+  main .text .read-more {
+    font-size: 14px;
+  }
 }
 
 main .pics {
@@ -92,6 +128,17 @@ main .pics .card {
   left: 40%;
   width: 410px;
   height: 190px;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  main .pics .card {
+    width: 300px;
+    height: 140px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 main .pics .card .user {
@@ -116,10 +163,22 @@ main .pics .card .user__name {
   font-size: 14px;
 }
 
+@media (max-width: 850px) {
+  main .pics .card .user__name {
+    font-size: 12px;
+  }
+}
+
 main .pics .card .user__job {
   font-weight: 500;
   font-size: 12px;
   color: #828282;
+}
+
+@media (max-width: 850px) {
+  main .pics .card .user__job {
+    font-size: 10px;
+  }
 }
 
 main .pics .card .card-text {
@@ -130,10 +189,72 @@ main .pics .card .card-text {
   width: 290px;
 }
 
+@media (max-width: 850px) {
+  main .pics .card .card-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 850px) {
+  main .pics {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  main {
+    display: block;
+  }
+}
+
 footer {
+  width: 100%;
+  position: relative;
+  top: 0;
   text-align: center;
   font-weight: 600;
   font-size: 14px;
+}
+
+footer * {
   color: #a9a9a9;
+}
+
+footer hr {
+  width: 350px;
+}
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburguer .line {
+  background-color: white;
+  height: 3px;
+  width: 28.5px;
+  margin-bottom: 4px;
+}
+
+.hamburguer .line:nth-child(3) {
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .hamburguer {
+    display: block;
+  }
+}
+
+.menu.appear {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
